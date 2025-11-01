@@ -1,16 +1,48 @@
-# React + Vite
+## 📝 Task Tracker
+A simple and efficient Task Management application to help users organize and track their daily tasks effortlessly.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🚀 Features
+* ✅ Add new tasks
+* 🗒 View all tasks
+* ✏ Edit existing tasks
+* 🗑 Delete tasks
+* 📌 Mark tasks as completed or pending
+* 🔍 Filter tasks by status (All, Completed, Pending)
+* 💾 Data persistence using LocalStorage
 
-Currently, two official plugins are available:
+# 🛠 Tech Stack
+* Frontend: React.js, Tailwind CSS
+* State Management: useState, useEffect hooks
+* Storage: LocalStorage
+* Deployment: Vercel
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 📂 Project Structure
+Task-Tracker/
+├── src/
+│   ├── components/
+│   │   ├── TaskForm.jsx
+│   │   ├── TaskList.jsx
+│   │   └── TaskItem.jsx
+│   ├── services/
+│   │   └── taskService.js
+│   ├── helpers/
+│   │   └── utils.js
+│   ├── pages/
+│   │   └── Home.jsx
+│   └── App.jsx
+├── public/
+├── package.json
+└── README.md
 
-## React Compiler
+# 💡 Usage
+* Click “Add” to create a new task
+* Click the checkbox to mark a task as completed
+* Use Edit ✏ or Delete 🗑 buttons to modify or remove a task
+* Use filters (All / Pending / Completed) to view specific tasks
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# 🌐 Live Demo
+👉 sajal-task-tracker.vercel.app
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 🧑‍💻 Contributing
+Contributions are welcome!
+Feel free to fork this repository, enhance features, and create a pull request.
