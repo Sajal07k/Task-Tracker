@@ -72,9 +72,9 @@ function TaskForm({ onSave, editingTask, setEditingTask }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-4 bg-white shadow-lg rounded-lg mb-6 w-full max-w-lg mx-auto"
+      className="p-4 bg-white rounded-xl shadow-lg mb-6 w-full mx-auto border border-gray-100"
     >
-      <h2 className="text-xl font-bold mb-4 text-gray-800">
+      <h2 className="text-xl font-semibold mb-4 text-gray-700">
         {editingTask ? "Edit Task" : "Add New Task"}
       </h2>
       <div className="flex flex-col sm:flex-row gap-3">
@@ -97,7 +97,7 @@ function TaskForm({ onSave, editingTask, setEditingTask }) {
           {/* Save/Add Button */}
           <button
             type="submit"
-            className="px-4 py-3 min-w-[100px] bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-150 ease-in-out disabled:opacity-50"
+            className="px-4 py-3 min-w-[100px] bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 hover:shadow-lg transition duration-200 ease-in-out disabled:opacity-50 disabled:shadow-none"
             disabled={!description.trim()}
           >
             {editingTask ? "Save" : "Add"}
@@ -108,7 +108,7 @@ function TaskForm({ onSave, editingTask, setEditingTask }) {
             <button
               type="button"
               onClick={handleCancelEdit}
-              className="px-4 py-3 min-w-[100px] bg-gray-400 text-white font-semibold rounded-lg shadow-md hover:bg-gray-500 transition duration-150 ease-in-out"
+              className="px-4 py-3 min-w-[100px] bg-gray-200 text-gray-700 font-semibold rounded-lg shadow-sm hover:bg-gray-300 transition duration-200 ease-in-out"
             >
               Cancel
             </button>

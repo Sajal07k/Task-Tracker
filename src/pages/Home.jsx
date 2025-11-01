@@ -102,16 +102,16 @@ function Home() {
   }, [tasks, filter]);
 
   // Tailwind classes for the filter buttons
-  const filterButtonClass = "px-4 py-2 font-medium rounded-lg transition duration-150 ease-in-out shadow-sm";
-  const activeFilterClass = "bg-blue-600 text-white hover:bg-blue-700";
-  const inactiveFilterClass = "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300";
+  const filterButtonClass = "px-4 py-2 text-sm font-semibold rounded-full transition duration-200 ease-in-out border";
+  const activeFilterClass = "bg-indigo-600 text-white border-indigo-600 shadow-md hover:bg-indigo-700 hover:scale-[1.03]";
+  const inactiveFilterClass = "bg-white text-gray-600 border-gray-300 hover:bg-gray-50 hover:text-indigo-600";
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4 sm:p-8">
-      <div className="max-w-3xl mx-auto">
-        <header className="text-center mb-8">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800">
-            Task Tracker
+    <div className="min-h-screen bg-slate-50 font-sans p-4 sm:p-8">
+      <div className="max-w-xl lg:max-w-3xl mx-auto">
+        <header className="text-center pt-4 pb-8">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800 tracking-tight">
+            Task Tracker 📝
           </h1>
         </header>
 
@@ -123,7 +123,7 @@ function Home() {
         />
 
         {/* Filter Controls */}
-        <div className="flex justify-center space-x-4 mb-6">
+        <div className="flex justify-center flex-wrap gap-3 mb-6">
           {['All', 'Pending', 'Completed'].map((status) => (
             <button
               key={status}
@@ -135,8 +135,7 @@ function Home() {
           ))}
         </div>
 
-        {/* Task List Component */}
-        <div className="p-4 bg-white rounded-lg shadow-xl">
+        <div className="p-2 sm:p-4 bg-white rounded-xl shadow-lg border border-gray-100">
           <TaskList
             tasks={filteredTasks}
             onToggleComplete={handleToggleComplete}
